@@ -1,0 +1,4 @@
+interface:
+  display_name: "요청을 정확하게 정리하기"
+  short_description: "막연한 질문을 AI가 실행할 수 있는 요청으로 정리"
+  default_prompt: "Use $intent-clarifier to restate my request clearly and precisely."
