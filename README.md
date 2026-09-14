@@ -42,6 +42,31 @@ $simple-explanation 아래 답변을 쉽게 설명해줘.
 
 전역 설치를 원하지 않으면 각 스킬 폴더의 `SKILL.md`를 다른 AI 도구의 지침으로 제공하세요. UI·CSS 용어를 다룰 때는 같은 폴더의 `references/` 파일도 함께 제공해야 합니다.
 
+## Claude Code에서 사용하기
+
+두 스킬은 파일 수정 없이 Claude Code에서도 사용할 수 있습니다. 이 저장소의 루트에서 스킬 폴더를 복사합니다.
+
+```bash
+mkdir -p ~/.claude/skills
+cp -R agent-skills/intent-clarifier ~/.claude/skills/
+cp -R agent-skills/simple-explanation ~/.claude/skills/
+```
+
+`~/.claude/skills/`에 설치하면 이 컴퓨터의 모든 프로젝트에서 사용할 수 있습니다. 특정 프로젝트에서만 사용하려면 해당 프로젝트의 `.claude/skills/`에 복사하세요.
+
+각 스킬 폴더 바로 아래에 `SKILL.md`가 있어야 합니다. UI·CSS 사전과 라이선스가 들어 있는 `references/`도 함께 복사하세요.
+
+Claude Code에서 다음처럼 호출합니다.
+
+```text
+/intent-clarifier 이 요청을 AI가 이해하기 쉽게 정리해줘.
+/simple-explanation 아래 답변을 쉽게 설명해줘.
+```
+
+이름을 포함해 “intent-clarifier로 정리해줘”라고 요청할 수도 있고, 요청이 스킬 설명에 맞으면 Claude가 자동으로 사용할 수도 있습니다.
+
+슬래시 호출은 기본으로 활성화되어 있으므로 `SKILL.md`에 `user-invocable: true`를 추가할 필요가 없습니다. 자세한 규칙은 [Claude Code 공식 스킬 문서](https://code.claude.com/docs/en/skills)를 참고하세요.
+
 ## 출처
 
 UI·CSS 사전의 일부는 [Giting UI 메뉴판](https://giting.kr/skills/ui-menu)과 [CSS 증상 사전](https://giting.kr/skills/css-menu)을 바탕으로 작성했습니다. 원본 저작권과 MIT 라이선스 고지는 각 스킬의 `references/`에 포함되어 있습니다.
