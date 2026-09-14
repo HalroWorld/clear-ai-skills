@@ -1,6 +1,6 @@
 ---
 name: simple-explanation
-description: Use when the user asks for a Korean answer that is concise, easy to understand, summarized, simplified, or suitable for a beginner.
+description: Use when the user asks for a concise, easy Korean explanation or needs an AI answer translated into everyday language, including unfamiliar UI and CSS terminology.
 ---
 
 # 쉽게 묻고 쉽게 답하기
@@ -16,6 +16,29 @@ description: Use when the user asks for a Korean answer that is concise, easy to
 3. 전문 용어는 필요한 만큼만 쓰고, 처음 나올 때 쉬운 말로 풀이한다.
 4. 절차는 번호 목록으로, 비교는 짧은 표나 병렬 항목으로 표현한다.
 5. 사용자가 상세 설명이나 특정 형식을 요구하면 그 요구에 맞춰 충분한 정보를 제공한다.
+
+## AI 답변의 UI 용어를 쉬운 말로 풀기
+
+답변에 낯선 UI 용어가 나오면 [UI 사전](references/ui-dictionary.md)에서 해당 명칭의 쉬운 설명과 구분 기준을 찾아 읽는다. UI와 관련 없는 답변에는 사전이 필요하지 않다.
+
+- 원문에 나온 요소만 문맥에 맞게 풀어 쓴다. 이름이 다시 필요하면 첫 설명에 정식 명칭을 함께 쓴다.
+- 화면에서 어디에 무엇이 나타나고, 사용자가 무엇을 할 수 있는지 전달한다. 사전에 있는 일반적인 동작을 실제 구현된 기능처럼 덧붙이지 않는다.
+- “팝업”처럼 뜻이 불명확하면 원문의 표현과 불확실성을 유지한다. 구분이 설명에 꼭 필요할 때만 확인한다.
+- 구현 예정·완료·검증 여부와 원문의 조건을 그대로 유지한다. 코드 식별자와 정확히 입력해야 하는 값은 번역하지 않는다.
+- 사전에 없는 용어도 문맥으로 설명할 수 있으면 풀고, 뜻을 확인할 수 없으면 추측하지 않는다.
+
+예: “드로어 메뉴를 추가했습니다. 모바일 검증은 아직입니다.” → “화면 옆에서 나오는 메뉴를 추가했습니다. 휴대폰에서도 제대로 작동하는지는 아직 확인하지 않았습니다.”
+
+## AI 답변의 CSS 용어를 쉬운 말로 풀기
+
+배치·간격·잘림 등 CSS 설명을 전달할 때는 [CSS 사전](references/css-dictionary.md)의 용어 풀이와 관련 증상만 찾아 읽는다.
+
+- 속성 이름을 나열하기보다 화면에서 무엇이 달라지는지 설명한다. 예: `gap`은 요소 사이 간격, `padding`은 상자 안쪽 여백이다.
+- 사전에 있는 원인 후보를 원문에 덧붙이지 않는다. “의심된다”, “수정할 예정이다”, “확인하지 못했다” 같은 확실성·진행 상태를 보존한다.
+- 원문의 기술적 표현만으로 효과를 확정할 수 없으면 의미만 풀어 쓴다. 확인되지 않은 원인이나 수정 성공을 만들어 내지 않는다.
+- 사용자가 복사할 CSS 코드·속성·값은 그대로 두고 주변 설명을 쉽게 쓴다. 제공된 수정 요청을 대신 실행하지 않는다.
+
+예: “조상의 overflow: hidden이 원인으로 의심됩니다. 아직 수정 전입니다.” → “바깥쪽 상자가 넘친 내용을 숨기는 설정 때문에 잘리는 것으로 보입니다. 아직 수정하지 않았습니다.”
 
 ## 품질 기준
 
