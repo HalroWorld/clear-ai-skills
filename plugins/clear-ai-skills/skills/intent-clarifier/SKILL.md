@@ -1,12 +1,23 @@
 ---
 name: intent-clarifier
-description: Use when the user needs a vague, long, or casually written request restated accurately for an AI, including unfamiliar UI elements and everyday descriptions of CSS layout problems.
+description: Use automatically when a user expresses a desired change or asks for an outcome with phrases such as “좋겠어”, “했으면 해”, “원해”, or “달라고”, or when a vague, long, or casually written request needs accurate restatement, including UI, CSS, server, networking, frontend, backend, and programming-language terms or symptoms.
 user-invocable: true
 ---
 
 # 요청 의도 정리하기
 
 사용자의 말을 임의로 바꾸거나 범위를 넓히지 않고, AI가 바로 이해하고 실행할 수 있는 요청으로 정리한다.
+
+## 자동 적용 기준
+
+사용자가 다음처럼 원하는 상태나 변경을 표현하면 `intent-clarifier`를 자동으로 적용한다.
+
+- “~하면 좋겠어” 또는 “~되면 좋겠어”
+- “~했으면 해”, “~되었으면 좋겠다”, “~하고 싶어”, “~을 원해”
+- “~을/를 달라고 해”, “~을/를 알려 달라고 해”, “~을/를 만들어 달라고 해”처럼 원하는 결과물을 요청하는 표현
+- “고쳐줘”, “추가해줘”처럼 목적은 있지만 대상·조건·결과가 모호한 요청
+
+특히 `좋겠어`와 `달라고`는 단순 인용이나 감탄이 아니라 원하는 결과물을 나타내는 문맥이면 자동 적용 신호로 본다. 사용자가 원하는 결과를 말했더라도 대상·범위·조건이 분명하면 불필요하게 다시 쓰지 말고, 실행 전에 확인이 필요한 내용만 분리한다.
 
 ## 정리 순서
 
@@ -38,6 +49,17 @@ user-invocable: true
 - 사전에 CSS 후보가 있어도 이미지 로딩 실패나 클릭 불가 등이 반드시 CSS 문제라고 단정하지 않는다.
 
 예: “폰에서 화면이 옆으로 밀려요” → “휴대폰에서 페이지가 가로로 밀리는 원인을 조사하고, 화면 너비 안에서 볼 수 있도록 수정해 주세요.” 기종이나 발생 페이지가 필요하면 확인하고, 특정 CSS 속성은 확정하지 않는다.
+
+## 개발 표현과 증상을 요청으로 바꾸기
+
+서버·네트워크·프론트엔드·백엔드·프로그래밍 언어에 관한 일상 표현은 [개발 사전](references/development-dictionary.md)에서 해당 영역과 항목만 찾아 읽는다. 관련 없는 요청에는 읽지 않는다.
+
+- 사용자가 제공한 발생 환경·관찰한 증상·원하는 결과를 중심으로 정리한다. 언어·프레임워크·실행 위치를 추측해 추가하지 않는다.
+- 접속 실패를 서버 장애로, 저장 실패를 백엔드 문제로 바로 단정하지 않는다. 원인 후보와 확인된 사실을 구분한다.
+- 사전의 확인 지점은 요구사항이나 해결책이 아니다. 보안 설정 해제, 타입 검사 끄기, 특정 저장 방식 등을 임의로 요청에 넣지 않는다.
+- 정확한 오류 문구·코드 식별자는 유지한다. 필요한 정보만 확인하고 비밀값이나 개인정보는 요구하지 않는다.
+
+예: “저장을 두 번 누르면 같은 글이 두 개 생겨” → “저장 버튼을 연속으로 누를 때 같은 글이 중복 생성되는 원인을 조사하고, 중복 저장되지 않도록 수정해 주세요.” 버튼 비활성화나 특정 데이터베이스 처방은 확정하지 않는다.
 
 ## 확인 절차
 

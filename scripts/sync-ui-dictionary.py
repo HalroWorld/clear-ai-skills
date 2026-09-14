@@ -1,4 +1,4 @@
-"""Copy shared UI/CSS references into independently installable skill folders."""
+"""Copy shared dictionaries and licenses into independently installable skill folders."""
 
 import argparse
 from pathlib import Path
@@ -12,7 +12,8 @@ def main():
     outdated = []
     for skill in ("intent-clarifier", "simple-explanation"):
         for filename in ("ui-dictionary.md", "LICENSE-ui-menu.txt",
-                         "css-dictionary.md", "LICENSE-css-menu.txt"):
+                         "css-dictionary.md", "LICENSE-css-menu.txt",
+                         "development-dictionary.md"):
             source = root / "shared" / filename
             target = root / "plugins" / "clear-ai-skills" / "skills" / skill / "references" / filename
             content = source.read_bytes()
@@ -24,7 +25,7 @@ def main():
                 target.write_bytes(content)
     if outdated:
         parser.exit(1, "Out of sync: " + ", ".join(outdated) + "\n")
-    print("UI/CSS references are in sync.")
+    print("Shared references are in sync.")
 
 
 if __name__ == "__main__":
