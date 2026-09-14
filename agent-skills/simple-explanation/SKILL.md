@@ -1,6 +1,7 @@
 ---
 name: simple-explanation
 description: Use when the user asks for a concise, easy Korean explanation or needs an AI answer translated into everyday language, including unfamiliar UI and CSS terminology.
+user-invocable: true
 ---
 
 # 쉽게 묻고 쉽게 답하기

@@ -1,6 +1,7 @@
 ---
 name: intent-clarifier
 description: Use when the user needs a vague, long, or casually written request restated accurately for an AI, including unfamiliar UI elements and everyday descriptions of CSS layout problems.
+user-invocable: true
 ---
 
 # 요청 의도 정리하기
