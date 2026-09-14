@@ -1,14 +1,18 @@
 ---
 name: simple-explanation
-description: Use when the user asks for a concise, easy Korean explanation or needs an AI answer translated into everyday language, including unfamiliar UI and CSS terminology.
+description: Use whenever an answer to a Korean-speaking user may be hard to understand because it contains technical, unfamiliar, abstract, or dense information, even when the user did not ask for simplification.
 user-invocable: true
 ---
 
-# 쉽게 묻고 쉽게 답하기
+# 처음부터 쉽게 답하기
+
+사용자가 따로 요청하지 않아도 답변하기 전에 내용의 난이도를 판단한다. 기술적이거나 낯설거나 복잡한 내용이면 처음부터 핵심 중심의 쉬운 한국어로 답한다. 이미 작성된 어려운 답변을 쉽게 풀어 달라는 요청에도 같은 기준을 적용한다.
 
 ## 답변 원칙
 
-핵심 결론을 첫 문장에 쓴다. 쉬운 한국어와 짧은 문장을 사용하고, 사용자의 배경지식에 맞춘다.
+사용자가 “쉽게 설명해 달라”고 말했는지를 발동 조건으로 삼지 않는다. 답변이 사용자에게 어려울 수 있는지가 기준이다.
+
+핵심 결론을 첫 문장에 쓴다. 쉬운 한국어와 짧은 문장을 사용하고, 사용자의 배경지식에 맞춘다. 평범하고 이미 쉬운 답변에는 불필요한 풀이를 덧붙이지 않는다.
 
 ## 답변 형태
 

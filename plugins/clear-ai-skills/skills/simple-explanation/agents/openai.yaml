@@ -1,0 +1,4 @@
+interface:
+  display_name: "처음부터 쉽게 답하기"
+  short_description: "어려운 내용을 판단해 처음부터 쉬운 한국어로 답변"
+  default_prompt: "Use $simple-explanation to answer this in clear, concise Korean from the start."

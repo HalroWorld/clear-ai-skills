@@ -14,7 +14,7 @@ def main():
         for filename in ("ui-dictionary.md", "LICENSE-ui-menu.txt",
                          "css-dictionary.md", "LICENSE-css-menu.txt"):
             source = root / "shared" / filename
-            target = root / "agent-skills" / skill / "references" / filename
+            target = root / "plugins" / "clear-ai-skills" / "skills" / skill / "references" / filename
             content = source.read_bytes()
             if args.check:
                 if not target.exists() or target.read_bytes() != content:

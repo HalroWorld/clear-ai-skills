@@ -15,8 +15,9 @@ AI에게는 정확한 요청을, 사람에게는 이해하기 쉬운 답변을 �
 
 ### `simple-explanation`
 
-AI의 기술적인 답변을 핵심 중심의 쉬운 한국어로 바꿉니다.
+답변의 난이도를 먼저 판단하고, 기술적이거나 낯선 내용은 사용자가 요청하기 전부터 쉬운 한국어로 설명합니다.
 
+- “쉽게 설명해줘”라는 요청이 없어도 필요한 경우 자동으로 적용합니다.
 - 결론을 먼저 말합니다.
 - UI 용어를 “드로어 → 화면 옆에서 나오는 메뉴”처럼 풀이합니다.
 - CSS 용어를 “padding → 상자 안쪽 여백”처럼 풀이합니다.
@@ -24,48 +25,43 @@ AI의 기술적인 답변을 핵심 중심의 쉬운 한국어로 바꿉니다.
 
 두 스킬에는 UI 요소 36개와 CSS 증상 42개를 담은 사전이 함께 들어 있습니다.
 
-## Codex에서 사용하기
+## Codex 플러그인 설치
 
-원하는 스킬 폴더를 전역 스킬 디렉터리에 복사합니다.
+마켓플레이스를 등록하고 플러그인을 설치합니다.
 
 ```bash
-cp -R agent-skills/intent-clarifier ~/.codex/skills/
-cp -R agent-skills/simple-explanation ~/.codex/skills/
+codex plugin marketplace add HalroWorld/clear-ai-skills
+codex plugin add clear-ai-skills@clear-ai-skills
 ```
 
 새 대화에서 다음처럼 사용할 수 있습니다.
 
 ```text
-$intent-clarifier 이 요청을 AI가 이해하기 쉽게 정리해줘.
-$simple-explanation 아래 답변을 쉽게 설명해줘.
+$clear-ai-skills:intent-clarifier 이 요청을 AI가 이해하기 쉽게 정리해줘.
+$clear-ai-skills:simple-explanation 아래 답변을 쉽게 설명해줘.
 ```
 
-전역 설치를 원하지 않으면 각 스킬 폴더의 `SKILL.md`를 다른 AI 도구의 지침으로 제공하세요. UI·CSS 용어를 다룰 때는 같은 폴더의 `references/` 파일도 함께 제공해야 합니다.
+직접 설치하려면 `plugins/clear-ai-skills/skills/` 아래의 원하는 스킬 폴더를 `~/.codex/skills/`로 복사하세요.
 
-## Claude Code에서 사용하기
+## Claude Code 플러그인 설치
 
-두 스킬은 파일 수정 없이 Claude Code에서도 사용할 수 있습니다. 이 저장소의 루트에서 스킬 폴더를 복사합니다.
-
-```bash
-mkdir -p ~/.claude/skills
-cp -R agent-skills/intent-clarifier ~/.claude/skills/
-cp -R agent-skills/simple-explanation ~/.claude/skills/
-```
-
-`~/.claude/skills/`에 설치하면 이 컴퓨터의 모든 프로젝트에서 사용할 수 있습니다. 특정 프로젝트에서만 사용하려면 해당 프로젝트의 `.claude/skills/`에 복사하세요.
-
-각 스킬 폴더 바로 아래에 `SKILL.md`가 있어야 합니다. UI·CSS 사전과 라이선스가 들어 있는 `references/`도 함께 복사하세요.
-
-Claude Code에서 다음처럼 호출합니다.
+Claude Code에서 마켓플레이스를 등록하고 플러그인을 설치합니다.
 
 ```text
-/intent-clarifier 이 요청을 AI가 이해하기 쉽게 정리해줘.
-/simple-explanation 아래 답변을 쉽게 설명해줘.
+/plugin marketplace add HalroWorld/clear-ai-skills
+/plugin install clear-ai-skills@clear-ai-skills
 ```
 
-이름을 포함해 “intent-clarifier로 정리해줘”라고 요청할 수도 있고, 요청이 스킬 설명에 맞으면 Claude가 자동으로 사용할 수도 있습니다.
+설치 후 다음처럼 호출합니다.
 
-슬래시 호출은 기본으로 활성화되어 있으므로 `SKILL.md`에 `user-invocable: true`를 추가할 필요가 없습니다. 자세한 규칙은 [Claude Code 공식 스킬 문서](https://code.claude.com/docs/en/skills)를 참고하세요.
+```text
+/clear-ai-skills:intent-clarifier 이 요청을 AI가 이해하기 쉽게 정리해줘.
+/clear-ai-skills:simple-explanation 아래 답변을 쉽게 설명해줘.
+```
+
+요청이 스킬 설명에 맞으면 Claude가 자동으로 사용할 수도 있습니다. 플러그인 업데이트는 `/plugin marketplace update clear-ai-skills`로 확인할 수 있으며, 마켓플레이스의 자동 업데이트를 켜면 시작할 때 새 버전을 받습니다.
+
+직접 설치하려면 `plugins/clear-ai-skills/skills/` 아래의 원하는 스킬 폴더를 `~/.claude/skills/`로 복사하세요. 자세한 규칙은 [Claude Code 공식 플러그인 문서](https://code.claude.com/docs/en/plugins)를 참고하세요.
 
 ## 출처
 

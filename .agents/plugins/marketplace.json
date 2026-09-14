@@ -1,0 +1,20 @@
+{
+  "name": "clear-ai-skills",
+  "interface": {
+    "displayName": "Clear AI Skills"
+  },
+  "plugins": [
+    {
+      "name": "clear-ai-skills",
+      "source": {
+        "source": "local",
+        "path": "./plugins/clear-ai-skills"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

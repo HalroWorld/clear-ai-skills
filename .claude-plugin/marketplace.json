@@ -1,0 +1,14 @@
+{
+  "name": "clear-ai-skills",
+  "description": "Clear requests for AI and easy-to-understand Korean answers",
+  "owner": {
+    "name": "HalroWorld"
+  },
+  "plugins": [
+    {
+      "name": "clear-ai-skills",
+      "source": "./plugins/clear-ai-skills",
+      "description": "Clear requests for AI and easy-to-understand Korean answers"
+    }
+  ]
+}
