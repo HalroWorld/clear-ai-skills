@@ -77,9 +77,24 @@ Claude Code에서 마켓플레이스를 등록하고 플러그인을 설치합�
 /clear-ai-skills:simple-explanation 아래 답변을 쉽게 설명해줘.
 ```
 
-요청이 스킬 설명에 맞으면 Claude가 자동으로 사용할 수도 있습니다. 플러그인 업데이트는 `/plugin marketplace update clear-ai-skills`로 확인할 수 있으며, 마켓플레이스의 자동 업데이트를 켜면 시작할 때 새 버전을 받습니다.
+요청이 스킬 설명에 맞으면 Claude가 자동으로 사용할 수도 있습니다.
 
-직접 설치하려면 `plugins/clear-ai-skills/skills/` 아래의 원하는 스킬 폴더를 `~/.claude/skills/`로 복사하세요. 자세한 규칙은 [Claude Code 공식 플러그인 문서](https://code.claude.com/docs/en/plugins)를 참고하세요.
+### 최신 버전 유지하기
+
+서드파티 마켓플레이스는 자동 업데이트가 **기본으로 꺼져 있습니다.** 한 번만 켜두면 이후로는 알아서 최신 버전을 받습니다.
+
+1. `/plugin` 실행
+2. **Marketplaces** 탭에서 `clear-ai-skills` 선택
+3. **Enable auto-update** 선택
+
+세션을 시작하고 잠시 뒤 백그라운드로 갱신되며, 새 버전을 받으면 `/reload-plugins` 안내가 뜹니다. 지금 바로 받고 싶다면:
+
+```text
+/plugin marketplace update clear-ai-skills
+/plugin update clear-ai-skills
+```
+
+플러그인 대신 스킬 폴더를 `~/.claude/skills/`로 직접 복사할 수도 있지만 권장하지 않습니다. 복사본은 업데이트되지 않고, 이름이 같은 플러그인 스킬을 가려서 `/intent-clarifier`가 계속 옛 버전으로 실행됩니다. 자세한 규칙은 [Claude Code 공식 플러그인 문서](https://code.claude.com/docs/en/plugins)를 참고하세요.
 
 ## 라이선스
 
