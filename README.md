@@ -81,6 +81,10 @@ Claude Code에서 마켓플레이스를 등록하고 플러그인을 설치합�
 
 직접 설치하려면 `plugins/clear-ai-skills/skills/` 아래의 원하는 스킬 폴더를 `~/.claude/skills/`로 복사하세요. 자세한 규칙은 [Claude Code 공식 플러그인 문서](https://code.claude.com/docs/en/plugins)를 참고하세요.
 
+## 라이선스
+
+이 프로젝트는 [MIT License](LICENSE)로 배포됩니다.
+
 ## 출처
 
 UI·CSS 사전의 일부는 [Giting UI 메뉴판](https://giting.kr/skills/ui-menu)과 [CSS 증상 사전](https://giting.kr/skills/css-menu)을 바탕으로 작성했습니다. 원본 저작권과 MIT 라이선스 고지는 각 스킬의 `references/`에 포함되어 있습니다.
