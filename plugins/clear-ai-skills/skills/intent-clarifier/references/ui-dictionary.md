@@ -2,6 +2,8 @@
 
 일상 표현 → UI 이름 → 쉬운 설명을 연결하는 참고 자료다. 별칭은 검색 단서이며 정답을 확정하는 규칙이 아니다. 사용자 또는 원문의 동작과 문맥을 먼저 따른다.
 
+각 항목은 한국어와 영어 표현을 함께 담는다. 사용자가 쓴 언어의 줄에서 표현을 찾고, 설명도 같은 언어로 돌려준다. `구분` 줄은 언어와 무관한 판별 기준이므로 한국어로만 적고, 답변할 때는 사용자의 언어로 옮긴다. 두 언어 어디에도 없는 표현은 임의로 항목에 끼워 맞추지 말고 문맥을 확인한다.
+
 - 요청 정리: 표현과 동작에 맞는 명칭을 찾고, 위치·개수·조건은 사용자가 제공한 것만 반영한다.
 - 답변 설명: 원문에 등장한 용어를 쉬운 설명으로 풀되, 일반적인 특징을 구현 사실로 추가하지 않는다.
 - 모호한 “팝업”은 모달·토스트·팝오버 등을 뜻할 수 있다. 나타나는 위치, 목적, 다른 화면 조작을 막는지로 구분한다.
@@ -20,203 +22,275 @@ Copyright (c) 2026 Giting (hanmariyang). 원본 MIT 고지 전문: [LICENSE-ui-m
 ### 헤더 (Header)
 
 - 일상 표현: 맨 위에 있는 바 / 상단 바 / 위에 로고 있는 줄
+- Everyday phrasing: the bar at the very top / top bar / the strip with the logo in it
 - 쉬운 설명: 페이지 맨 위, 로고와 메뉴가 사는 가로 줄.
+- Plain explanation: The horizontal strip across the top of the page, where the logo and menu live.
 - 구분: 맨 위 전체 띠가 헤더, 그 안의 메뉴 묶음이 네비게이션 바
 
 ### 네비게이션 바 (Navbar / GNB)
 
 - 일상 표현: 메뉴 줄 / 카테고리 바 / GNB
+- Everyday phrasing: the menu row / category bar / GNB
 - 쉬운 설명: 사이트의 큰 메뉴를 모아 둔 이동 줄. 보통 헤더 안에 산다.
+- Plain explanation: The row that gathers a site's main menu links. Usually lives inside the header.
 - 구분: 사이트 전체 메뉴 줄이면 네비게이션 바, 그 줄을 담는 전체 띠가 헤더
 
 ### 히어로 (Hero)
 
 - 일상 표현: 첫 화면에 크게 나오는 거 / 메인 배너 / 대문
+- Everyday phrasing: the big thing on the first screen / main banner / the splash at the top
 - 쉬운 설명: 들어오자마자 보이는 큰 제목과 버튼 구역. 페이지의 첫인상.
+- Plain explanation: The large heading-and-button area you see on arrival. The page's first impression.
 - 구분: 첫 화면의 큰 구역이면 히어로, 가로로 긴 알림 띠면 배너
 
 ### 사이드바 (Sidebar)
 
 - 일상 표현: 옆에 세로로 붙은 메뉴 / 왼쪽 메뉴 / 옆 패널
+- Everyday phrasing: the vertical menu stuck to the side / left menu / side panel
 - 쉬운 설명: 화면 옆에 세로로 붙는 메뉴·목차 영역.
+- Plain explanation: A menu or table-of-contents area fixed vertically along the side of the screen.
 - 구분: 항상 붙어 있으면 사이드바, 눌렀을 때만 나오면 드로어
 
 ### 푸터 (Footer)
 
 - 일상 표현: 맨 아래 정보 나오는 데 / 하단 / 바닥글
+- Everyday phrasing: the info at the very bottom / bottom / footer text
 - 쉬운 설명: 페이지 맨 아래, 저작권·링크·연락처가 모이는 줄.
+- Plain explanation: The strip at the very bottom of the page, gathering copyright, links, and contact details.
 
 ### 그리드 (Grid)
 
 - 일상 표현: 바둑판처럼 배치 / 3개씩 나란히 / 격자
+- Everyday phrasing: laid out like a checkerboard / three across / a lattice
 - 쉬운 설명: 칸을 격자로 나눠 나란히 배치하는 방식.
+- Plain explanation: A layout that divides space into a grid of cells arranged side by side.
 
 ### 카드 (Card)
 
 - 일상 표현: 네모 박스 하나하나 / 박스형 / 테두리 있는 덩어리
+- Everyday phrasing: each little square box / box style / a bordered chunk
 - 쉬운 설명: 이미지·제목·설명을 한 덩어리로 묶은 네모 상자.
+- Plain explanation: A rectangular box bundling an image, title, and description into one unit.
 
 ### 탭 (Tabs)
 
 - 일상 표현: 위에 눌러서 화면 바뀌는 거 / 칸 전환 버튼 / 메뉴 눌러서 내용 바뀌는 거
+- Everyday phrasing: the things at the top that switch the view / panel switch buttons / clicking a menu changes the content
 - 쉬운 설명: 버튼을 눌러 같은 자리의 내용을 갈아 끼우는 전환 장치.
+- Plain explanation: A switcher that swaps the content in one place when you press a button.
 - 구분: 같은 영역의 내용을 전환하면 탭, 다른 페이지로 이동하면 탐색 메뉴.
 
 ### 아코디언 (Accordion)
 
 - 일상 표현: 접었다 폈다 되는 거 / 클릭하면 펼쳐지는 목록 / FAQ 접기
+- Everyday phrasing: the thing that folds and unfolds / a list that expands when clicked / collapsible FAQ
 - 쉬운 설명: 제목을 누르면 내용이 접히고 펼쳐지는 목록.
+- Plain explanation: A list whose sections collapse and expand when you press their headings.
 - 구분: 제목 아래 내용을 접고 펼치는 구조가 아코디언, 같은 영역의 내용을 전환하면 탭. 아코디언의 동시 열림 여부는 별도 조건이다.
 
 ### 브레드크럼 (Breadcrumb)
 
 - 일상 표현: 홈 > 제품 > 이런 거 / 지금 위치 나오는 줄 / 경로 표시
+- Everyday phrasing: that Home > Products > thing / the line showing where I am / path display
 - 쉬운 설명: 홈 / 제품 / 노트북처럼 지금 어디에 있는지 보여주는 경로 줄.
+- Plain explanation: A trail such as Home / Products / Laptops showing where you currently are.
 
 ### 페이지네이션 (Pagination)
 
 - 일상 표현: 아래에 1 2 3 페이지 숫자 / 페이지 넘기기 / 다음 페이지 버튼
+- Everyday phrasing: the 1 2 3 page numbers at the bottom / turning pages / next page button
 - 쉬운 설명: 긴 목록을 1·2·3 페이지로 나눠 넘기는 번호 줄.
+- Plain explanation: A numbered row that splits a long list into pages 1, 2, 3 and so on.
 - 구분: 숫자로 나눠 넘기면 페이지네이션, 바닥에서 자동으로 이어지면 무한 스크롤, 버튼으로 이어붙이면 더보기
 
 ### 무한 스크롤 (Infinite Scroll)
 
 - 일상 표현: 내리면 계속 나오는 거 / 끝없이 로딩 / SNS 피드처럼
+- Everyday phrasing: it keeps coming as I scroll / endless loading / like a social feed
 - 쉬운 설명: 바닥에 닿으면 다음 내용을 계속 불러오는 방식.
+- Plain explanation: A pattern that keeps loading the next batch whenever you reach the bottom.
 - 구분: 자동으로 이어지면 무한 스크롤, 버튼을 눌러야 이어지면 더보기
 
 ### 더보기 버튼 (Load More)
 
 - 일상 표현: 눌러야 더 나오는 거 / 더보기 눌러서 펼치기 / 10개씩 더 보기
+- Everyday phrasing: you have to press it for more / clicking Load more to expand / show 10 more
 - 쉬운 설명: 누르면 다음 묶음을 이어서 보여주는 버튼. 무한 스크롤의 수동 버전.
+- Plain explanation: A button that appends the next batch when pressed. The manual version of infinite scroll.
 - 구분: 버튼을 눌러야 이어지면 더보기, 자동이면 무한 스크롤
 
 ### 캐러셀 (Carousel / Slider)
 
 - 일상 표현: 옆으로 넘기는 배너 / 슬라이드 / 좌우로 돌아가는 이미지
+- Everyday phrasing: the banner you swipe sideways / slides / images that rotate left and right
 - 쉬운 설명: 여러 장을 옆으로 넘겨 보는 회전 목록.
+- Plain explanation: A rotating list you page through sideways, one item at a time.
 
 ### 드롭다운 메뉴 (Dropdown)
 
 - 일상 표현: 누르면 아래로 목록 나오는 거 / 펼침 메뉴 / 호버하면 나오는 메뉴
+- Everyday phrasing: press it and a list drops down / expanding menu / the menu that appears on hover
 - 쉬운 설명: 누르면 아래로 선택지 목록이 펼쳐지는 메뉴.
+- Plain explanation: A menu whose list of choices unfolds downward when pressed.
 - 구분: 메뉴가 아래로 펼쳐지면 드롭다운, 폼에서 값을 고르는 입력칸이면 셀렉트
 
 ### 햄버거 메뉴 (Hamburger Menu)
 
 - 일상 표현: 줄 세 개 아이콘 / 삼선 버튼 / 모바일에서 메뉴 여는 거
+- Everyday phrasing: the three-lines icon / the three-bar button / the thing that opens the menu on mobile
 - 쉬운 설명: ≡ 모양 아이콘. 모바일에서 메뉴를 접어 두는 버튼.
+- Plain explanation: The ≡ icon. The button that keeps the menu tucked away on mobile.
 - 구분: ≡ 버튼 자체가 햄버거, 버튼을 눌러 옆에서 나오는 패널이 드로어. 버튼 모양만으로 열리는 메뉴의 종류를 확정하지 않는다.
 
 ### 드로어 (Drawer / Side Panel)
 
 - 일상 표현: 옆에서 미끄러져 나오는 메뉴 / 햄버거 누르면 나오는 거 / 슬라이드 패널
+- Everyday phrasing: the menu that slides in from the side / what opens when I press the hamburger / slide-in panel
 - 쉬운 설명: 화면 옆에서 서랍처럼 밀려 나오는 판.
+- Plain explanation: A panel that slides out from the side of the screen like a drawer.
 - 구분: 이 사전에서는 옆에서 나오는 패널을 뜻한다. 아래에서 올라오면 바텀 시트, 옆에 상시 배치되면 사이드바. 라이브러리에 따라 Drawer라는 이름의 범위는 다를 수 있다.
 
 ### 폼 (Form)
 
 - 일상 표현: 신청서 전체 / 입력칸 묶음 / 제출하는 양식
+- Everyday phrasing: the whole application form / a group of input fields / the form you submit
 - 쉬운 설명: 입력칸들과 제출 버튼을 묶은 양식 전체.
+- Plain explanation: A whole form bundling input fields together with a submit button.
 
 ### 인풋 (Input / Text Field)
 
 - 일상 표현: 한 줄 입력칸 / 글자 쓰는 칸 / 텍스트필드
+- Everyday phrasing: a one-line input box / the box you type into / text field
 - 쉬운 설명: 한 줄짜리 글자 입력칸.
+- Plain explanation: A single-line box for typing text.
 
 ### 셀렉트 (Select)
 
 - 일상 표현: 목록에서 하나 고르는 거 / 선택 상자 / 펼쳐서 고르기
+- Everyday phrasing: picking one from a list / selection box / expand and choose
 - 쉬운 설명: 펼쳐지는 목록에서 하나를 고르는 선택 상자.
+- Plain explanation: A selection box where you pick one option from a list that unfolds.
 - 구분: 폼에서 값을 고르면 셀렉트, 이동·동작 메뉴면 드롭다운
 
 ### 체크박스 (Checkbox)
 
 - 일상 표현: 네모에 체크하는 거 / 여러 개 고르는 거 / 동의 체크
+- Everyday phrasing: ticking a square / choosing several / the agreement tick
 - 쉬운 설명: 여러 개를 동시에 고를 수 있는 네모 체크칸.
+- Plain explanation: A square tick box that lets you choose several options at once.
 
 ### 라디오 버튼 (Radio Button)
 
 - 일상 표현: 동그라미 중에 하나만 고르는 거 / 단일 선택 / 하나만 체크되는 거
+- Everyday phrasing: picking only one of the circles / single choice / only one stays ticked
 - 쉬운 설명: 여러 개 중 하나만 고를 수 있는 동그란 선택 버튼.
+- Plain explanation: A round selection button that allows only one choice among several.
 
 ### 토글 스위치 (Toggle / Switch)
 
 - 일상 표현: 껐다 켰다 하는 동그라미 / on/off 버튼 / 밀어서 켜는 거
+- Everyday phrasing: the circle you flip on and off / on/off button / slide to turn on
 - 쉬운 설명: 설정을 켜고 끄는 스위치.
+- Plain explanation: A switch that turns a setting on and off.
 - 구분: 켜짐/꺼짐 설정을 바꾸는 요소. 드래그가 필수라는 뜻은 아니다.
 
 ### 슬라이더 (Slider / Range)
 
 - 일상 표현: 드래그로 숫자 정하는 거 / 좌우로 끄는 바 / 범위 조절
+- Everyday phrasing: dragging to set a number / the bar you pull left and right / range adjustment
 - 쉬운 설명: 손잡이를 끌어 숫자나 범위를 정하는 바.
+- Plain explanation: A bar whose handle you drag to set a number or a range.
 - 구분: 값이나 범위를 조절하면 슬라이더, 이미지나 카드를 넘기면 캐러셀.
 
 ### 라벨 (Label)
 
 - 일상 표현: 입력칸 위 이름표 / 칸 제목 / 무슨 칸인지 써 있는 거
+- Everyday phrasing: the name above the input box / field title / the text saying what the box is for
 - 쉬운 설명: 입력칸이 어떤 정보를 받는지 알려주는 이름표.
+- Plain explanation: A name tag telling you what information an input field expects.
 
 ### 플레이스홀더 (Placeholder)
 
 - 일상 표현: 흐리게 미리 써 있는 예시 / 입력 전에 보이는 회색 글자 / 힌트 글자
+- Everyday phrasing: the faint example already written in it / the grey text before you type / hint text
 - 쉬운 설명: 입력 전 칸 안에 흐리게 보이는 예시 글자. 입력하면 사라진다.
+- Plain explanation: Faint example text shown inside an empty field. It disappears once you type.
 
 ### 모달 (Modal / Dialog)
 
 - 일상 표현: 화면 가운데 뜨는 창 / 팝업 / 뒤가 어두워지면서 뜨는 거
+- Everyday phrasing: the window that pops up in the middle / popup / the thing that appears while the background darkens
 - 쉬운 설명: 닫거나 응답하기 전까지 뒤쪽 화면의 조작을 막는 대화상자.
+- Plain explanation: A dialog that blocks interaction with the screen behind it until you close or answer it.
 - 구분: 다른 화면 조작을 막고 응답을 받는 대화상자. 중앙 배치만으로 모달인지 확정하지 않는다.
 
 ### 바텀 시트 (Bottom Sheet)
 
 - 일상 표현: 아래에서 올라오는 판 / 밑에서 스윽 나오는 거 / 모바일 공유창 같은 거
+- Everyday phrasing: the panel that rises from the bottom / the thing that slides up from below / like the mobile share sheet
 - 쉬운 설명: 화면 아래에서 올라오는 판. 모바일에서 모달 대신 많이 쓴다.
+- Plain explanation: A panel that rises from the bottom of the screen. Often used instead of a modal on mobile.
 - 구분: 아래에서 올라오면 바텀 시트, 옆에서 밀려 나오면 드로어
 
 ### 토스트 (Toast / Snackbar)
 
 - 일상 표현: 잠깐 떴다 사라지는 알림 / 저장됐다고 뜨는 거 / 구석에 뜨는 알림
+- Everyday phrasing: the notice that appears briefly and vanishes / the Saved message / the notice in the corner
 - 쉬운 설명: 구석에 잠깐 나타났다 저절로 사라지는 짧은 알림.
+- Plain explanation: A short notice that appears in a corner and disappears on its own.
 - 구분: 잠시 표시하는 알림. 표시 시간이나 자동 닫힘을 실제 구현 사실로 단정하지 않는다.
 
 ### 얼럿 (Alert / Callout)
 
 - 일상 표현: 색 있는 알림 상자 / 노란 경고 박스 / 안내 박스
+- Everyday phrasing: the coloured notice box / the yellow warning box / information box
 - 쉬운 설명: 성공·경고·오류 등의 안내를 화면 안에 표시하는 상자.
+- Plain explanation: A box shown inline on the page carrying a success, warning, or error message.
 - 구분: 화면 안의 안내 영역이면 얼럿, 잠시 떠서 알리면 토스트. 실제 닫힘 방식은 문맥을 따른다.
 
 ### 툴팁 (Tooltip)
 
 - 일상 표현: 마우스 올리면 뜨는 작은 설명 / 말풍선 도움말 / 물음표 설명
+- Everyday phrasing: the little description on hover / speech-bubble help / the question-mark explanation
 - 쉬운 설명: 마우스를 올리거나 키보드로 요소에 초점을 맞추면 나타나는 짧은 설명.
+- Plain explanation: A short description that appears when you hover over an element or focus it with the keyboard.
 - 구분: 요소의 짧은 보충 설명이면 툴팁, 버튼 등 상호작용 내용을 담는 작은 패널이면 팝오버.
 
 ### 팝오버 (Popover)
 
 - 일상 표현: 눌러서 여는 작은 판 / 클릭하면 뜨는 말풍선 / 미니 팝업
+- Everyday phrasing: the small panel you click open / the bubble that appears on click / mini popup
 - 쉬운 설명: 눌러서 여는 작은 판. 툴팁보다 크고, 안에 버튼·링크도 들어간다.
+- Plain explanation: A small panel opened by pressing something. Larger than a tooltip, and it can hold buttons and links.
 - 구분: 특정 요소에 붙어 뜨는 작은 패널. 다른 화면 조작을 막는 모달과 구분한다.
 
 ### 프로그레스 바 (Progress Bar)
 
 - 일상 표현: 차오르는 막대 / 진행률 바 / 몇 퍼센트 게이지
+- Everyday phrasing: the bar that fills up / progress bar / the percentage gauge
 - 쉬운 설명: 얼마나 진행됐는지 차오르는 막대로 보여주는 것.
+- Plain explanation: A filling bar showing how far along something is.
 - 구분: 진행 상태를 막대로 나타내면 프로그레스 바, 회전 표시로 나타내면 스피너. 진행률을 모르는 막대 표시도 있다.
 
 ### 스피너 (Spinner / Loader)
 
 - 일상 표현: 빙글빙글 도는 거 / 로딩 동그라미 / 돌아가는 로딩
+- Everyday phrasing: the spinning thing / loading circle / the turning loader
 - 쉬운 설명: 빙글빙글 돌며 로딩 중임을 알리는 표시. 끝이 언제인지 모를 때 쓴다.
+- Plain explanation: A spinning indicator showing that loading is in progress. Used when the end is not known.
 - 구분: 끝을 모르면 스피너, 진행률이 있으면 프로그레스 바, 내용 자리를 미리 그리면 스켈레톤
 
 ### 스켈레톤 (Skeleton)
 
 - 일상 표현: 로딩 때 회색 뼈대 / 번쩍거리는 회색 박스 / 로딩 자리 표시
+- Everyday phrasing: the grey skeleton while loading / shimmering grey boxes / loading placeholders
 - 쉬운 설명: 내용을 불러오는 동안 그 내용이 들어갈 자리를 미리 보여주는 모양.
+- Plain explanation: Shapes standing in for content while it loads, showing where that content will go.
 - 구분: 내용 자리를 미리 그리면 스켈레톤, 그냥 돌기만 하면 스피너
 
 ### 엠프티 스테이트 (Empty State)
 
 - 일상 표현: 내용 없을 때 화면 / 텅 비었을 때 나오는 거 / 아직 없어요 화면
+- Everyday phrasing: the screen when there is nothing / what shows when it is empty / the nothing-here screen
 - 쉬운 설명: 목록이나 검색 결과 등 보여줄 내용이 없음을 안내하는 화면.
+- Plain explanation: A screen explaining that there is no content to show, such as an empty list or no search results.

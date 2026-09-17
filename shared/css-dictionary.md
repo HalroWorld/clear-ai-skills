@@ -2,6 +2,8 @@
 
 화면 문제를 정확한 요청으로 정리하거나 AI의 CSS 설명을 쉬운 말로 전달할 때 사용한다. CSS는 화면의 배치와 모양을 정하는 규칙이다.
 
+각 증상은 한국어와 영어 표현을 함께 담는다. 사용자가 쓴 언어의 줄에서 표현을 찾고, 설명도 같은 언어로 돌려준다. 원인 후보·구분할 상황·확인 예시는 언어와 무관한 판단 기준이므로 한국어로만 적고, 답변할 때 사용자의 언어로 옮긴다.
+
 ## 사용 기준
 
 - 아래 원인 후보는 가능한 경우의 예시다. 현재 코드나 화면을 확인한 진단 결과가 아니며, 후보 목록이 모든 원인을 포함하지도 않는다.
@@ -20,30 +22,30 @@ Copyright (c) 2026 Giting (hanmariyang). [원본 MIT 고지 전문](LICENSE-css-
 
 ## CSS 용어 → 쉬운 설명
 
-| 용어 | 쉬운 설명 |
-| --- | --- |
-| 부모·조상 요소 | 현재 요소를 바깥에서 감싸는 상자. 부모는 바로 바깥 상자다. |
-| flex / grid | 요소를 한 방향으로 정렬하거나 행과 열로 배치하는 방식 |
-| text-align | 상자 안의 글자나 줄 안 내용을 좌우로 정렬하는 설정 |
-| align-items / justify-content | flex나 grid에서 요소를 축에 따라 정렬하는 설정. 가로·세로 방향은 배치 설정에 따라 달라진다. |
-| margin / padding / gap | 각각 상자 바깥 여백 / 상자 안쪽 여백 / 요소 사이 간격 |
-| line-height | 글 한 줄이 차지하는 높이로, 줄 사이 간격에 영향을 주는 값 |
-| overflow / overflow: hidden | 넘친 내용을 처리하는 설정 / 상자 밖으로 넘친 내용을 숨기는 설정 |
-| overflow-wrap / word-break | 긴 문자열을 어디서 줄바꿈할지 정하는 규칙 |
-| keep-all | 단어 중간 줄바꿈을 줄이는 설정. 좁은 공간에서는 넘침도 확인해야 한다. |
-| text-overflow: ellipsis / line-clamp | 넘친 글의 말줄임 표시 / 표시할 글줄 수 제한 |
-| max-width / min-height | 최대 너비 / 최소 높이. min-height: 0은 상자가 내용보다 작게 줄어들 수 있도록 허용할 때 쓰인다. |
-| sticky / fixed | 스크롤 중 기준 위치에 붙는 배치 / 보통 화면을 기준으로 고정하는 배치. 실제 기준은 조상 설정의 영향도 받는다. |
-| z-index / stacking context | 겹친 요소의 앞뒤 순서 / 그 순서를 따로 계산하는 묶음 |
-| portal | 요소를 문서의 다른 위치에 렌더링하는 방식. CSS 속성은 아니다. |
-| scroll lock / scroll-margin-top | 배경 등의 스크롤 잠금 / 해당 위치로 이동할 때 위쪽에 두는 여유 |
-| vh / dvh | 화면 높이 기준 단위 / 모바일 주소창 변화 등을 반영하는 동적 화면 높이 단위 |
-| hover / focus / pointer-events | 마우스를 올린 상태 / 키보드 등으로 초점이 맞춰진 상태 / 포인터 입력 대상 여부를 정하는 설정 |
-| transform / opacity / filter | 이동·크기·회전 등의 변형 / 불투명도 / 흐림 같은 시각 효과 |
-| display: none / visibility: hidden | 배치 공간과 함께 숨김 / 배치 공간을 남기고 숨김 |
-| display: block / baseline | 요소를 블록 형태로 배치 / 글자를 정렬하는 기준선 |
-| font-family / fallback | 사용할 글꼴 목록 / 해당 글꼴이 없을 때 사용하는 대체 글꼴 |
-| tabular-nums / contrast | 숫자 너비를 일정하게 하는 글꼴 기능 / 글자와 배경의 밝기 차이 |
+| 용어 | 쉬운 설명 | Plain explanation |
+| --- | --- | --- |
+| 부모·조상 요소 | 현재 요소를 바깥에서 감싸는 상자. 부모는 바로 바깥 상자다. | The box wrapping the current element from outside. The parent is the box immediately around it. |
+| flex / grid | 요소를 한 방향으로 정렬하거나 행과 열로 배치하는 방식 | Ways of arranging elements along one direction, or into rows and columns |
+| text-align | 상자 안의 글자나 줄 안 내용을 좌우로 정렬하는 설정 | The setting that aligns text, or inline content, horizontally within a box |
+| align-items / justify-content | flex나 grid에서 요소를 축에 따라 정렬하는 설정. 가로·세로 방향은 배치 설정에 따라 달라진다. | Settings that align elements along an axis in flex or grid. Which axis is horizontal or vertical depends on the layout direction. |
+| margin / padding / gap | 각각 상자 바깥 여백 / 상자 안쪽 여백 / 요소 사이 간격 | Space outside a box / space inside a box / the gap between elements |
+| line-height | 글 한 줄이 차지하는 높이로, 줄 사이 간격에 영향을 주는 값 | The height one line of text occupies, which affects the spacing between lines |
+| overflow / overflow: hidden | 넘친 내용을 처리하는 설정 / 상자 밖으로 넘친 내용을 숨기는 설정 | The setting for handling content that overflows / the setting that hides content spilling outside the box |
+| overflow-wrap / word-break | 긴 문자열을 어디서 줄바꿈할지 정하는 규칙 | Rules deciding where a long string is allowed to wrap |
+| keep-all | 단어 중간 줄바꿈을 줄이는 설정. 좁은 공간에서는 넘침도 확인해야 한다. | A setting that reduces breaking inside words. In narrow space, check for overflow as well. |
+| text-overflow: ellipsis / line-clamp | 넘친 글의 말줄임 표시 / 표시할 글줄 수 제한 | An ellipsis marking overflowing text / a limit on how many lines are shown |
+| max-width / min-height | 최대 너비 / 최소 높이. min-height: 0은 상자가 내용보다 작게 줄어들 수 있도록 허용할 때 쓰인다. | Maximum width / minimum height. min-height: 0 is used to let a box shrink below its content. |
+| sticky / fixed | 스크롤 중 기준 위치에 붙는 배치 / 보통 화면을 기준으로 고정하는 배치. 실제 기준은 조상 설정의 영향도 받는다. | Positioning that pins to a reference point while scrolling / positioning usually fixed relative to the viewport. The actual reference is also affected by ancestor settings. |
+| z-index / stacking context | 겹친 요소의 앞뒤 순서 / 그 순서를 따로 계산하는 묶음 | The front-to-back order of overlapping elements / the grouping within which that order is calculated separately |
+| portal | 요소를 문서의 다른 위치에 렌더링하는 방식. CSS 속성은 아니다. | A way of rendering an element at a different place in the document. Not a CSS property. |
+| scroll lock / scroll-margin-top | 배경 등의 스크롤 잠금 / 해당 위치로 이동할 때 위쪽에 두는 여유 | Locking the scroll of the background and such / the room left above a target when jumping to it |
+| vh / dvh | 화면 높이 기준 단위 / 모바일 주소창 변화 등을 반영하는 동적 화면 높이 단위 | A unit based on viewport height / a dynamic viewport-height unit that reflects things like a mobile address bar changing |
+| hover / focus / pointer-events | 마우스를 올린 상태 / 키보드 등으로 초점이 맞춰진 상태 / 포인터 입력 대상 여부를 정하는 설정 | The state of having the mouse over something / the state of being focused via keyboard or otherwise / the setting deciding whether something receives pointer input |
+| transform / opacity / filter | 이동·크기·회전 등의 변형 / 불투명도 / 흐림 같은 시각 효과 | Transformations such as move, scale, and rotate / opacity / visual effects such as blur |
+| display: none / visibility: hidden | 배치 공간과 함께 숨김 / 배치 공간을 남기고 숨김 | Hidden along with its layout space / hidden while its layout space remains |
+| display: block / baseline | 요소를 블록 형태로 배치 / 글자를 정렬하는 기준선 | Laying an element out as a block / the line that text is aligned on |
+| font-family / fallback | 사용할 글꼴 목록 / 해당 글꼴이 없을 때 사용하는 대체 글꼴 | The list of fonts to use / the substitute font used when that font is unavailable |
+| tabular-nums / contrast | 숫자 너비를 일정하게 하는 글꼴 기능 / 글자와 배경의 밝기 차이 | A font feature keeping digits the same width / the brightness difference between text and background |
 
 ## 증상 찾기
 
@@ -53,30 +55,35 @@ Copyright (c) 2026 Giting (hanmariyang). [원본 MIT 고지 전문](LICENSE-css-
 #### 세로 가운데가 안 맞아요 (`vertical-center`)
 
 - 일상 표현: 위에 붙어요 / 어중간하게 떠요 / 가운데 오라니까 좌우만 가운데예요
+- Everyday phrasing: it sticks to the top / it floats at some odd height / I said centre it and only the left-right is centred
 - 원인 후보(미확인): 감싸는 상자에 높이가 없다 — 내용만큼만 커서 '가운데'랄 공간 자체가 없음 / 가로만 가운데 정렬했다 (세로축 지시가 빠짐) / margin auto를 줬는데 부모가 flex/grid가 아님
 - 확인 예시: 창 높이를 바꿔도 항상 정가운데면 성공.
 
 #### 가로 가운데로 안 와요 (`horizontal-center`)
 
 - 일상 표현: 왼쪽에 붙어요 / 가운데 오라고 했는데 안 와요
+- Everyday phrasing: it sticks to the left / I told it to centre and it won't
 - 원인 후보(미확인): 상자는 가운데인데 안의 글자만 왼쪽 (상자 정렬과 글자 정렬은 다른 지시) / 상자 너비가 100%라 가운데로 올 여지가 없음
 - 확인 예시: 상자와 글자 중 의도한 쪽만 정확히 가운데면 성공.
 
 #### 아이콘이랑 글자 높이가 안 맞아요 (`icon-text-align`)
 
 - 일상 표현: 아이콘이 위로 떠 있어요 / 체크 표시가 글자보다 올라가 있어요
+- Everyday phrasing: the icon sits too high / the tick mark is above the text
 - 원인 후보(미확인): 아이콘과 글자를 그냥 나란히 놓기만 함 — 세로 기준을 맞추라는 지시가 없음
 - 확인 예시: 글자 크기를 키워도 아이콘이 항상 글줄 가운데에 있으면 성공.
 
 #### 양쪽 끝으로 보내고 싶은데 한쪽에 몰려요 (`space-between`)
 
 - 일상 표현: 제목은 왼쪽, 버튼은 오른쪽에 두고 싶어요 / 한 줄에 양끝으로 벌리고 싶어요
+- Everyday phrasing: I want the title left and the button right / I want them pushed to both ends of one row
 - 원인 후보(미확인): 나란히 놓기만 하고 '사이를 벌려라'는 지시(space-between)가 없음
 - 확인 예시: 화면 폭을 줄이거나 늘려도 양끝이 유지되면 성공.
 
 #### 마지막 카드만 혼자 이상해요 (`last-row`)
 
 - 일상 표현: 마지막 줄이 벌어져요 / 마지막 카드만 혼자 커져요 / 마지막 줄만 가운데로 가요
+- Everyday phrasing: the last row spreads out / only the last card gets bigger / only the last row centres itself
 - 원인 후보(미확인): 마지막 줄은 채울 카드가 부족해서 정렬 규칙이 그대로 드러나는 자리 — 무엇이 '정상'인지부터 정해야 함
 - 구분할 상황: 마지막 카드가 늘어나 줄을 꽉 채움 / 마지막 줄에 빈칸이 생겨 허전함 / 마지막 줄만 가운데로 감
 - 확인 예시: 카드 개수를 하나 줄이거나 늘려도 마지막 줄이 의도대로 보이면 성공.
@@ -86,18 +93,21 @@ Copyright (c) 2026 Giting (hanmariyang). [원본 MIT 고지 전문](LICENSE-css-
 #### 이미지가 상자를 뚫고 나가요 (`img-overflow`)
 
 - 일상 표현: 사진이 너무 커요 / 사진이 상자 밖으로 나가요
+- Everyday phrasing: the photo is too big / the photo spills out of its box
 - 원인 후보(미확인): 이미지에 최대 폭 제한이 없음 — 원본 크기 그대로 나옴
 - 확인 예시: 아주 큰 사진을 넣어도 상자 안에 들어오면 성공.
 
 #### 긴 영어·링크가 상자를 뚫어요 (`long-string`)
 
 - 일상 표현: URL이 삐져나가요 / 영어 한 덩어리가 안 끊겨요
+- Everyday phrasing: the URL pokes out / a long English word won't break
 - 원인 후보(미확인): 공백 없는 긴 문자열은 브라우저가 끊을 자리를 못 찾음 — 한 덩어리로 밀고 나감
 - 확인 예시: 아주 긴 링크를 넣어도 상자 폭이 변하지 않으면 성공.
 
 #### 펼친 메뉴가 잘려서 반만 보여요 (`clipped-popover`)
 
 - 일상 표현: 드롭다운이 카드 안에 갇혀요 / 툴팁이 잘려요
+- Everyday phrasing: the dropdown is trapped inside the card / the tooltip gets cut off
 - 원인 후보(미확인): 어떤 조상이 넘치는 것을 자르고 있음 — 누가 자르는지에 따라 처방이 다름
 - 구분할 상황: 부모 카드에 overflow hidden이 있음 / 조상에 transform이나 블러(backdrop-filter) 효과가 있음
 - 확인 예시: 메뉴가 카드 경계를 넘어 전부 보이면 성공.
@@ -105,12 +115,14 @@ Copyright (c) 2026 Giting (hanmariyang). [원본 MIT 고지 전문](LICENSE-css-
 #### 글자가 표시도 없이 뚝 잘려요 (`text-cut`)
 
 - 일상 표현: 끝이 잘렸는데 …도 없어요 / 제목이 중간에 끊겨요
+- Everyday phrasing: the end is cut off and there's no ellipsis / the title breaks off mid-way
 - 원인 후보(미확인): 넘침을 숨기기만 하고 말줄임(…) 처리가 없음
 - 확인 예시: 긴 제목이 …으로 끝나면 성공.
 
 #### 따라와야 할 헤더가 안 따라와요 (`sticky-fail`)
 
 - 일상 표현: sticky가 안 먹어요 / 스크롤하면 고정이 풀려요
+- Everyday phrasing: sticky isn't working / it stops staying put when I scroll
 - 원인 후보(미확인): 조상 중 하나가 overflow를 갖고 있음 — sticky가 그 안에 갇힘 / 붙을 위치(top) 지정이 빠짐
 - 확인 예시: 스크롤해도 헤더가 위에 붙어 있으면 성공.
 
@@ -119,30 +131,35 @@ Copyright (c) 2026 Giting (hanmariyang). [원본 MIT 고지 전문](LICENSE-css-
 #### 스크롤이 두 개 생겨요 (`double-scroll`)
 
 - 일상 표현: 안에서도 밖에서도 스크롤돼요 / 스크롤이 이상하게 두 번 걸려요
+- Everyday phrasing: it scrolls both inside and outside / there are two scrollbars somehow
 - 원인 후보(미확인): 바깥과 안쪽 상자가 둘 다 스크롤을 가짐 / flex 자식이 min-height: 0 없이 넘쳐서 부모까지 밀어냄 (헤더 고정 화면의 단골)
 - 확인 예시: 바깥은 안 움직이고 목록만 움직이면 성공.
 
 #### 팝업 떴는데 뒤 배경이 같이 스크롤돼요 (`scroll-lock`)
 
 - 일상 표현: 팝업 뒤가 움직여요 / 팝업 위에서 굴리면 뒤가 내려가요
+- Everyday phrasing: the background moves behind the popup / scrolling over the popup scrolls the page
 - 원인 후보(미확인): 팝업을 열 때 본문 스크롤을 잠그지 않음
 - 확인 예시: 팝업 위에서 휠을 굴려도 뒤가 안 움직이면 성공.
 
 #### 내용이 더 있는데 스크롤이 안 돼요 (`no-scroll`)
 
 - 일상 표현: 아래가 더 있는 것 같은데 못 내려가요 / 잘린 채로 멈춰 있어요
+- Everyday phrasing: there seems to be more below but I can't scroll to it / it's stuck cut off
 - 원인 후보(미확인): 어딘가의 overflow hidden이 전체 스크롤을 잠갔음 / 높이 100%가 이어지다 중간에 끊겨 내용 높이를 모름
 - 확인 예시: 내용 끝까지 내려가지면 성공.
 
 #### 페이지 이동할 때 화면이 좌우로 덜컹해요 (`scrollbar-shift`)
 
 - 일상 표현: 어떤 페이지는 살짝 밀려 보여요 / 내용이 튀는 느낌이에요
+- Everyday phrasing: some pages look slightly shifted / the content jumps
 - 원인 후보(미확인): 긴 페이지에만 스크롤바가 생겨서 그 폭만큼 내용이 밀림
 - 확인 예시: 짧은 페이지와 긴 페이지를 오가도 내용이 안 움직이면 성공.
 
 #### 채팅처럼 아래부터 보여야 하는데 위에서 시작해요 (`stick-to-bottom`)
 
 - 일상 표현: 새 메시지가 안 보여요 / 맨 아래로 안 내려가요
+- Everyday phrasing: I can't see new messages / it won't scroll to the bottom
 - 원인 후보(미확인): 목록이 위에서부터 쌓이기만 하고, 최신 항목으로 내려주는 처리가 없음
 - 확인 예시: 새 항목이 추가될 때마다 최신 항목이 바로 보이면 성공.
 
@@ -151,12 +168,14 @@ Copyright (c) 2026 Giting (hanmariyang). [원본 MIT 고지 전문](LICENSE-css-
 #### 버튼이 멀쩡한데 클릭이 안 돼요 (`click-blocked`)
 
 - 일상 표현: 눌러도 반응이 없어요 / 어떤 데는 되고 어떤 데는 안 돼요
+- Everyday phrasing: nothing happens when I click / it works in some places but not others
 - 원인 후보(미확인): 투명한 요소가 위를 덮고 있음 — 그라디언트 장식, 닫힌 줄 알았던 오버레이 / 쌓임 순서 경쟁에서 밀림
 - 확인 예시: 버튼 전체 어디를 눌러도 반응하면 성공.
 
 #### 팝업이 다른 것 뒤에 깔려요 (`stacking-context`)
 
 - 일상 표현: 모달이 헤더 뒤로 가요 / z-index를 아무리 올려도 안 돼요
+- Everyday phrasing: the modal goes behind the header / raising z-index doesn't help
 - 원인 후보(미확인): 쌓임 순서(z-index) 문제는 두 종류 — 단순 숫자 경쟁이거나, 조상이 만든 '층' 안에 갇혔거나
 - 구분할 상황: 숫자 경쟁 (같은 층에서 밀림) / 조상에 transform·filter·opacity가 있어서 그 안에 갇힘
 - 확인 예시: 팝업이 항상 모든 것 위에 뜨면 성공.
@@ -164,18 +183,21 @@ Copyright (c) 2026 Giting (hanmariyang). [원본 MIT 고지 전문](LICENSE-css-
 #### 겹친 글자 뒤가 비쳐 보여요 (`no-backdrop`)
 
 - 일상 표현: 글자 뒤가 지저분해요 / 떠 있는 게 뒤랑 섞여 보여요
+- Everyday phrasing: the area behind the text looks messy / the floating thing blends into what's behind it
 - 원인 후보(미확인): 떠 있는 요소에 배경색이 없음 — 뒤 내용이 그대로 비침
 - 확인 예시: 뒤 내용이 전혀 안 비치면 성공.
 
 #### 그림자가 잘려요 (`clipped-shadow`)
 
 - 일상 표현: 카드 그림자가 한쪽만 나와요 / 그림자가 반듯하게 끊겨요
+- Everyday phrasing: the card shadow only shows on one side / the shadow is cut off in a straight line
 - 원인 후보(미확인): 부모의 overflow hidden이 그림자까지 자름 / 그림자가 퍼질 여백 없이 경계에 꽉 붙음
 - 확인 예시: 그림자 네 방향이 모두 자연스럽게 보이면 성공.
 
 #### 목차 누르면 제목이 헤더에 가려요 (`anchor-under-header`)
 
 - 일상 표현: 이동하면 위가 잘려요 / 링크 타고 가면 반쯤 가려져 있어요
+- Everyday phrasing: the top gets cut off when it jumps / following the link leaves it half hidden
 - 원인 후보(미확인): 고정 헤더 높이만큼 내려서 멈추라는 지시(scroll-margin)가 없음
 - 확인 예시: 목차를 눌렀을 때 제목이 헤더 아래로 온전히 보이면 성공.
 
@@ -184,36 +206,42 @@ Copyright (c) 2026 Giting (hanmariyang). [원본 MIT 고지 전문](LICENSE-css-
 #### 폰에서 아래 버튼이 주소창에 가려요 (`100vh-trap`)
 
 - 일상 표현: 밑이 잘려요 / 버튼이 반만 보여요
+- Everyday phrasing: the bottom is cut off / only half the button is visible
 - 원인 후보(미확인): 화면 높이를 100vh로 잡음 — 폰 브라우저의 주소창 높이를 무시한 값
 - 확인 예시: 폰에서 주소창이 보이는 상태로도 하단 버튼이 다 보이면 성공.
 
 #### 폰에서 버튼이 잘 안 눌려요 (`tap-target`)
 
 - 일상 표현: 자꾸 옆에 걸 눌러요 / 터치가 어렵대요
+- Everyday phrasing: I keep hitting the one next to it / people say it's hard to tap
 - 원인 후보(미확인): 탭 영역이 손가락보다 작음 (44px 미만) / 누를 것들끼리 다닥다닥 붙어 있음
 - 확인 예시: 엄지로 연속해서 눌러도 옆 것이 안 눌리면 성공.
 
 #### 아이폰에서 입력칸 누르면 화면이 확대돼요 (`ios-input-zoom`)
 
 - 일상 표현: 입력하려고 하면 커져요 / 입력 끝나도 확대가 안 풀려요
+- Everyday phrasing: it zooms in when I try to type / the zoom doesn't reset after typing
 - 원인 후보(미확인): 입력칸 글자가 16px보다 작으면 iOS가 잘 보이라고 자동 확대함
 - 확인 예시: 아이폰에서 입력칸을 눌러도 화면이 안 커지면 성공.
 
 #### 폰에서 한 번 눌러선 안 되고 두 번 눌러야 해요 (`hover-dependent`)
 
 - 일상 표현: 첫 탭은 무시돼요 / PC에선 되는데 폰에서 이상해요
+- Everyday phrasing: the first tap is ignored / works on desktop but acts odd on a phone
 - 원인 후보(미확인): 마우스를 올렸을 때(hover)만 나타나는 메뉴 — 폰엔 마우스가 없어서 첫 탭이 hover 역할로 소모됨
 - 확인 예시: 폰에서 한 번 탭에 바로 열리면 성공.
 
 #### PC는 멀쩡한데 폰에서 옆으로 밀려요 (`fixed-width`)
 
 - 일상 표현: 폰에서 가로 스크롤이 생겨요 / 화면이 좌우로 흔들려요
+- Everyday phrasing: there's horizontal scrolling on my phone / the screen shifts side to side
 - 원인 후보(미확인): 어떤 요소가 픽셀 고정 폭(예: 600px) — 폰 화면(390px)보다 큼 / 넓은 표가 통째로 밀고 나감
 - 확인 예시: 폰 폭에서 화면이 좌우로 안 움직이면 성공.
 
 #### 앱처럼 만들었는데 헤더까지 같이 밀려요 (`app-shell-scroll`)
 
 - 일상 표현: 당기면 전체가 움직여요 / 고정해 둔 위아래가 출렁여요
+- Everyday phrasing: pulling moves the whole thing / the fixed top and bottom bounce
 - 원인 후보(미확인): 스크롤 주인이 문서 전체로 잡혀 있음 — 본문만 움직여야 하는데 다 같이 움직임 / 중간 flex 상자에 min-height: 0이 빠져 본문이 부모를 밀어냄
 - 확인 예시: 본문을 당겨도 헤더·하단탭이 전혀 안 움직이면 성공.
 
@@ -222,24 +250,28 @@ Copyright (c) 2026 Giting (hanmariyang). [원본 MIT 고지 전문](LICENSE-css-
 #### 간격이 어떨 땐 크고 어떨 땐 작아요 (`margin-collapse`)
 
 - 일상 표현: 위아래 여백이 들쭉날쭉해요 / 같은 간격을 줬는데 달라 보여요
+- Everyday phrasing: the vertical spacing is uneven / I set the same gap and they look different
 - 원인 후보(미확인): 항목마다 제각각 margin을 줌 — 이웃한 margin끼리 겹치고 접혀서 예측이 안 됨
 - 확인 예시: 어느 두 항목 사이든 간격이 똑같으면 성공.
 
 #### 이미지 밑에 정체불명 틈이 있어요 (`img-baseline-gap`)
 
 - 일상 표현: 사진 아래 흰 줄이 생겨요 / 사진과 상자가 안 붙어요
+- Everyday phrasing: there's a white line under the photo / the photo won't sit flush with its box
 - 원인 후보(미확인): 이미지가 '글자'로 취급돼서 글줄 바닥의 여유 공간이 아래에 생김
 - 확인 예시: 사진과 아래 상자가 딱 붙으면 성공.
 
 #### 첫 번째랑 마지막만 간격이 달라요 (`edge-margin`)
 
 - 일상 표현: 목록 끝에 여백이 남아요 / 끝만 이상하게 떠요
+- Everyday phrasing: there's leftover space at the end of the list / only the ends look off
 - 원인 후보(미확인): 모든 항목에 margin-bottom을 줘서 마지막 항목 뒤에도 여백이 남음
 - 확인 예시: 목록 맨 끝의 남는 여백이 사라지면 성공.
 
 #### 답답한데 어디를 늘려야 할지 모르겠어요 (`which-space`)
 
 - 일상 표현: 여백을 줬는데 여전히 답답해요 / 뭔가 빽빽해요
+- Everyday phrasing: I added space and it still feels cramped / it just looks crowded
 - 원인 후보(미확인): '여백'은 세 종류 — 상자 안(padding), 상자 사이(gap), 글줄 사이(line-height). 어디가 부족한지에 따라 처방이 다름
 - 구분할 상황: 상자 안이 답답 (글자가 테두리에 붙음) / 상자끼리 붙어 있음 / 글줄이 빽빽함
 - 확인 예시: '어디' 여백이 문제였는지 이름을 알게 되면 성공. 고침은 그다음.
@@ -247,6 +279,7 @@ Copyright (c) 2026 Giting (hanmariyang). [원본 MIT 고지 전문](LICENSE-css-
 #### 줄 간격이 답답하거나 휑해요 (`line-height`)
 
 - 일상 표현: 글이 빽빽해요 / 제목이 붕 떠 보여요
+- Everyday phrasing: the text is cramped / the heading looks like it's floating
 - 원인 후보(미확인): 줄 간격은 한 가지 정답이 없음 — 본문·제목·한 줄 라벨이 각각 다른 값을 원함
 - 구분할 상황: 본문 문단 / 큰 제목 / 버튼·라벨 같은 한 줄짜리
 - 확인 예시: 제목은 조밀하고 본문은 숨 쉬면 성공.
@@ -256,6 +289,7 @@ Copyright (c) 2026 Giting (hanmariyang). [원본 MIT 고지 전문](LICENSE-css-
 #### 한글이 단어 중간에서 끊겨요 (`korean-break`)
 
 - 일상 표현: 단어가 반 토막 나요 / 제목 줄바꿈이 지저분해요
+- Everyday phrasing: words get chopped in half / the heading wraps messily
 - 원인 후보(미확인): 줄바꿈은 한 가지 처방이 없음 — 같은 keep-all이 제목에선 약이고 좁은 표 칸에선 넘침 사고
 - 구분할 상황: 제목·본문이 어색하게 꺾임 / 표·배지 같은 좁은 칸 / URL·코드가 끊기는 것
 - 확인 예시: 제목은 단어 단위로 꺾이고, 표는 안 뚫리면 성공.
@@ -263,18 +297,21 @@ Copyright (c) 2026 Giting (hanmariyang). [원본 MIT 고지 전문](LICENSE-css-
 #### 소개글을 두 줄까지만 보여주고 싶어요 (`line-clamp`)
 
 - 일상 표현: 카드마다 글 길이가 달라 들쭉날쭉해요 / 설명이 너무 길게 나와요
+- Everyday phrasing: the text length varies per card so they're uneven / the description runs too long
 - 원인 후보(미확인): 줄 수 제한이 없어서 글 길이대로 카드 높이가 제각각
 - 확인 예시: 긴 글이 든 카드도 높이가 같으면 성공.
 
 #### 숫자가 바뀔 때마다 폭이 들썩여요 (`tabular-nums`)
 
 - 일상 표현: 타이머가 흔들려요 / 가격 바뀔 때 옆이 밀려요
+- Everyday phrasing: the timer jitters / things shift sideways when the price changes
 - 원인 후보(미확인): 글꼴의 숫자 폭이 제각각 (1은 좁고 8은 넓음) — 값이 바뀔 때마다 전체가 밀림
 - 확인 예시: 11:11이 88:88로 바뀌어도 주변이 안 밀리면 성공.
 
 #### 어떤 기기에선 글꼴이 달라 보여요 (`font-fallback`)
 
 - 일상 표현: 내 폰이랑 회사 PC랑 달라요 / 굵기가 이상한 데가 있어요
+- Everyday phrasing: it looks different on my phone than on the office PC / the weight looks off in places
 - 원인 후보(미확인): 글꼴이 다르게 보이는 원인은 여러 층 — 로딩 실패인지, 기기 기본값 차이인지, 굵기 미지원인지
 - 구분할 상황: 웹폰트가 늦거나 실패 / 기기 기본 글꼴 차이 / 특정 굵기만 이상함
 - 확인 예시: 주요 기기에서 같은 인상으로 보이면 성공.
@@ -282,6 +319,7 @@ Copyright (c) 2026 Giting (hanmariyang). [원본 MIT 고지 전문](LICENSE-css-
 #### 회색 글씨가 너무 안 보인대요 (`contrast`)
 
 - 일상 표현: 흐릿해요 / 야외에서 안 읽혀요
+- Everyday phrasing: it's washed out / you can't read it outdoors
 - 원인 후보(미확인): 보조 글자 색을 너무 연하게 잡음 — 배경과의 대비 부족
 - 확인 예시: 화면 밝기를 확 낮춰도 읽히면 성공.
 
@@ -290,18 +328,21 @@ Copyright (c) 2026 Giting (hanmariyang). [원본 MIT 고지 전문](LICENSE-css-
 #### 다크 모드에서 글자가 안 보여요 (`dark-mode-pair`)
 
 - 일상 표현: 밤에 보면 까매요 / 흰 화면에 흰 글씨가 됐어요
+- Everyday phrasing: it's all black at night / white text ended up on a white background
 - 원인 후보(미확인): 글자색만 바꾸고 배경을 안 바꿈 (또는 그 반대) — 색은 언제나 배경과 세트인데 한쪽만 지정함
 - 확인 예시: 라이트/다크를 오가도 모든 글자가 읽히면 성공.
 
 #### 분명 넣었는데 높이가 0이에요 (`collapsed-parent`)
 
 - 일상 표현: 상자가 접혔어요 / 배경색이 안 보여요
+- Everyday phrasing: the box collapsed / the background colour doesn't show
 - 원인 후보(미확인): 자식들이 전부 '떠 있음'(absolute·float) — 부모가 자기 높이를 계산할 재료가 없음
 - 확인 예시: 상자의 배경과 테두리가 내용을 감싸면 성공.
 
 #### 만들었다는데 화면에 안 보여요 (`not-visible`)
 
 - 일상 표현: 분명 추가했대요 / 어디 갔는지 모르겠어요
+- Everyday phrasing: they say they added it / I can't tell where it went
 - 원인 후보(미확인): '안 보임'의 원인은 네 층 — 없거나, 크기가 없거나, 가려졌거나, 화면 밖이거나. 순서대로 좁혀야 함
 - 구분할 상황: 아예 안 그려짐 / 있는데 크기 0이거나 투명 / 있는데 다른 것 뒤에 깔림 / 있는데 화면 밖
 - 확인 예시: 원인의 이름을 알게 되면 성공. 고침은 그다음.
@@ -309,17 +350,20 @@ Copyright (c) 2026 Giting (hanmariyang). [원본 MIT 고지 전문](LICENSE-css-
 #### 버튼이 하얗게만 나와요 (`nested-button`)
 
 - 일상 표현: 버튼 글자만 있고 상자가 안 보여요 / 스타일이 통째로 안 먹어요
+- Everyday phrasing: only the button text shows, no box / none of the styling applies
 - 원인 후보(미확인): 버튼 안에 버튼을 넣는 등 HTML 규칙이 어긋나면, 브라우저가 구조를 멋대로 재배치해서 스타일이 붕 뜸 / 배경색 미지정
 - 확인 예시: 버튼이 의도한 색과 모양으로 나오면 성공.
 
 #### 새로고침하면 잠깐 깨졌다가 돌아와요 (`flash-unstyled`)
 
 - 일상 표현: 처음에 민낯이 보여요 / 글꼴이 바뀌면서 출렁여요
+- Everyday phrasing: it looks unstyled for a moment at first / it jumps as the font swaps in
 - 원인 후보(미확인): 스타일과 글꼴이 늦게 도착 — 그 사이에 꾸며지지 않은 HTML이 먼저 보임
 - 확인 예시: 새로고침을 연타해도 민낯 화면이 안 보이면 성공.
 
 #### 이미지가 엑박이에요 (`broken-image`)
 
 - 일상 표현: 사진이 안 나와요 / 배포하니까 이미지만 사라졌어요
+- Everyday phrasing: the photo doesn't show / the images vanished after deploying
 - 원인 후보(미확인): 경로가 틀림 (대소문자, 폴더 위치, 배포 후 주소 변화) — CSS 문제가 아닌 경우가 대부분
 - 확인 예시: 이미지가 뜨면 성공.

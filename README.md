@@ -16,7 +16,8 @@ Restates casual, vague, or rambling requests as something an AI can act on.
 - Maps UI described in plain words — "the menu that slides in from the side" — to its real name, such as "drawer".
 - Reframes CSS symptoms like "the page shifts sideways on my phone" around the observed problem and the desired result.
 - Handles server, network, frontend, backend, and language symptoms the same way, without appending causes or fixes that have not been verified.
-- Triggers automatically when the user states a desired outcome — "I wish it would…", "I want…", "ask it to…" — and the target, scope, or conditions are unclear.
+- Triggers automatically when the user states a desired outcome — "I wish it would…", "I want…", "ask it to…", or the Korean equivalents — and the target, scope, or conditions are unclear.
+- Returns the restated request and its open questions in the language you wrote in.
 - Numbers open questions `1.`, `2.`, `3.`. When a question splits into alternatives, it lists them and marks the recommended one with `(추천)` and a one-line reason.
 - Confirms the restated request before treating it as final.
 
@@ -25,6 +26,7 @@ Restates casual, vague, or rambling requests as something an AI can act on.
 Judges how hard an answer is to follow, then explains technical or unfamiliar material in plain Korean before the user has to ask.
 
 - Applies automatically, with no "explain it simply" request needed.
+- Answers in the language you wrote in.
 - Leads with the conclusion.
 - Unpacks UI terms: "drawer → the menu that slides in from the side of the screen".
 - Unpacks CSS terms: "padding → the space inside a box".
@@ -32,6 +34,10 @@ Judges how hard an answer is to follow, then explains technical or unfamiliar ma
 - Preserves what is done, what is planned, what is unconfirmed, and any condition that matters.
 
 Both skills ship with dictionaries covering 36 UI elements, 42 CSS symptoms, and 34 development terms. They are wired so that only the entries relevant to a given question or answer get read.
+
+### Language
+
+Every dictionary entry carries both Korean and English phrasing, and both skills **answer in whatever language you wrote in** — English in, English out; Korean in, Korean out. Language-independent judgement notes, such as candidate causes and the criteria separating one term from a similar one, are written in Korean only and translated into your language when answering.
 
 ### Development domain examples
 

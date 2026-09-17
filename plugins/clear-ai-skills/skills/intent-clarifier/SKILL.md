@@ -1,6 +1,6 @@
 ---
 name: intent-clarifier
-description: Use automatically when a user expresses a desired change or asks for an outcome with phrases such as “좋겠어”, “했으면 해”, “원해”, or “달라고”, or when a vague, long, or casually written request needs accurate restatement, including UI, CSS, server, networking, frontend, backend, and programming-language terms or symptoms.
+description: Use automatically when a user expresses a desired change or asks for an outcome — Korean phrases such as “좋겠어”, “했으면 해”, “원해”, “달라고”, or English ones such as "I wish it would", "I'd like", "I want", "can you make it" — or when a vague, long, or casually written request needs accurate restatement, including UI, CSS, server, networking, frontend, backend, and programming-language terms or symptoms. Restates the request in the language the user wrote in.
 user-invocable: true
 ---
 
@@ -8,16 +8,24 @@ user-invocable: true
 
 사용자의 말을 임의로 바꾸거나 범위를 넓히지 않고, AI가 바로 이해하고 실행할 수 있는 요청으로 정리한다.
 
+정리한 요청과 확인 질문은 사용자가 쓴 언어로 작성한다. 사용자가 영어로 말하면 영어로, 한국어로 말하면 한국어로 돌려준다. 사전이 한국어로 적혀 있다는 이유로 출력 언어를 바꾸지 않는다. 아래 출력 형식의 `목적`·`조건`·`결과물` 같은 항목 이름도 같은 언어로 옮긴다.
+
 ## 자동 적용 기준
 
 사용자가 다음처럼 원하는 상태나 변경을 표현하면 `intent-clarifier`를 자동으로 적용한다.
 
-- “~하면 좋겠어” 또는 “~되면 좋겠어”
-- “~했으면 해”, “~되었으면 좋겠다”, “~하고 싶어”, “~을 원해”
-- “~을/를 달라고 해”, “~을/를 알려 달라고 해”, “~을/를 만들어 달라고 해”처럼 원하는 결과물을 요청하는 표현
-- “고쳐줘”, “추가해줘”처럼 목적은 있지만 대상·조건·결과가 모호한 요청
+- 한국어: “~하면 좋겠어”, “~되면 좋겠어”
+- 한국어: “~했으면 해”, “~되었으면 좋겠다”, “~하고 싶어”, “~을 원해”
+- 한국어: “~을/를 달라고 해”, “~을/를 알려 달라고 해”, “~을/를 만들어 달라고 해”처럼 원하는 결과물을 요청하는 표현
+- 한국어: “고쳐줘”, “추가해줘”처럼 목적은 있지만 대상·조건·결과가 모호한 요청
+- English: "I wish it would…", "it'd be nice if…", "I'd like it to…"
+- English: "I want…", "I need it to…", "can you make it…"
+- English: "ask it to…", "tell it to…", "have it generate…" and similar requests for a deliverable
+- English: "fix it", "add this" and similar — a clear purpose with a vague target, condition, or result
 
-특히 `좋겠어`와 `달라고`는 단순 인용이나 감탄이 아니라 원하는 결과물을 나타내는 문맥이면 자동 적용 신호로 본다. 사용자가 원하는 결과를 말했더라도 대상·범위·조건이 분명하면 불필요하게 다시 쓰지 말고, 실행 전에 확인이 필요한 내용만 분리한다.
+다른 언어도 같은 기준으로 판단한다. 표현 목록은 신호의 예시이며, 목록에 없는 표현이라도 원하는 결과를 말하면서 대상·범위·조건이 모호하면 적용한다.
+
+특히 `좋겠어`와 `달라고`, 그리고 영어의 "I wish"와 "ask it to"는 단순 인용이나 감탄이 아니라 원하는 결과물을 나타내는 문맥이면 자동 적용 신호로 본다. 사용자가 원하는 결과를 말했더라도 대상·범위·조건이 분명하면 불필요하게 다시 쓰지 말고, 실행 전에 확인이 필요한 내용만 분리한다.
 
 ## 정리 순서
 
