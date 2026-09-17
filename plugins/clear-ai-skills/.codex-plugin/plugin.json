@@ -1,7 +1,7 @@
 {
   "name": "clear-ai-skills",
   "version": "0.1.0",
-  "description": "Clear requests for AI and easy-to-understand Korean answers",
+  "description": "Clear requests for AI and easy-to-understand answers in the user's own language",
   "author": {
     "name": "HalroWorld",
     "url": "https://github.com/HalroWorld"
@@ -11,8 +11,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Clear AI Skills",
-    "shortDescription": "AI 요청을 명확하게, 기술 답변을 쉬운 한국어로",
-    "longDescription": "모호한 요청을 AI가 실행하기 좋게 정리하고, 어려운 기술 내용을 처음부터 쉬운 한국어로 설명하는 두 스킬을 제공합니다.",
+    "shortDescription": "AI 요청을 명확하게, 기술 답변을 쉬운 말로",
+    "longDescription": "모호한 요청을 AI가 실행하기 좋게 정리하고, 어려운 기술 내용을 처음부터 쉬운 말로 설명하는 두 스킬을 제공합니다. 사전은 한국어와 영어 표현을 함께 담고 있으며, 사용자가 쓴 언어로 답합니다.",
     "developerName": "HalroWorld",
     "category": "Productivity",
     "capabilities": ["Skills"],
